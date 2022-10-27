@@ -6,6 +6,12 @@
   "onboarding": false,
   "prConcurrentLimit": 20,
   "dependencyDashboard": true,
+  "recreateClosed": true,
   "requireConfig": "optional",
-  "postUpdateOptions": ["gomodTidy","gomodvendor"]
+  "postUpdateOptions": ["gomodTidy","gomodvendor"],
+  "postUpgradeTasks": {
+    "commands": [
+      "./catch.sh"
+    ]
+  }
 }
