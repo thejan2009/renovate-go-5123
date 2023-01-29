@@ -1,19 +1,19 @@
-name: Renovate
-on:
-  push:
-jobs:
-  renovate:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2.0.0
-      - name: Self-hosted Renovate
-        uses: renovatebot/github-action@v34.2.0
-        with:
-          configurationFile: renovate.json
-          token: ${{ secrets.RENOVATE_TOKEN }}
-        env:
-          LOG_LEVEL: debug
-          RENOVATE_ALLOWED_POST_UPGRADE_COMMANDS: '^./catch.sh$'
-          RENOVATE_ALLOW_POST_UPGRADE_COMMAND_TEMPLATING: true
-          RENOVATE_ENABLED_MANAGERS: "gomod"
+# name: Renovate
+# on:
+#   push:
+# jobs:
+#   renovate:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v2.0.0
+#       - name: Self-hosted Renovate
+#         uses: renovatebot/github-action@v34.2.0
+#         with:
+#           configurationFile: renovate.json
+#           token: ${{ secrets.RENOVATE_TOKEN }}
+#         env:
+#           LOG_LEVEL: debug
+#           RENOVATE_ALLOWED_POST_UPGRADE_COMMANDS: '^./catch.sh$'
+#           RENOVATE_ALLOW_POST_UPGRADE_COMMAND_TEMPLATING: true
+#           RENOVATE_ENABLED_MANAGERS: "gomod"
